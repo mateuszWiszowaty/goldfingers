@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usługi Remontowe - GoldFingers</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-image: url('tło.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    header {
+      background-color: rgba(34, 34, 34, 0.95);
+      padding: 25px 0;
+      text-align: center;
+      border-bottom: 3px solid #FFD700;
+      position: relative; /* Dodane dla prawidłowego pozycjonowania */
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #FFD700;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+      letter-spacing: 2px;
+    }
+
+    header p {
+      color: white;
+      font-size: 1.2rem;
+      opacity: 0.95;
+      letter-spacing: 1px;
+      font-weight: 300;
+    }
+
+    nav {
+      background-color: rgba(68, 68, 68, 0.95);
+      padding: 12px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 2px solid #FFD700;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 500;
+      padding: 5px 10px;
+      transition: all 0.3s;
+    }
+
+    nav a:hover {
+      color: #FFD700;
+      background-color: rgba(255, 215, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      width: 100%;
+      min-height: 70vh;
+    }
+
+    footer {
+      background-color: rgba(34, 34, 34, 0.95);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: auto;
+      border-top: 2px solid #FFD700;
+    }
+
+    /* NUMER TELEFONU W LEWYM GÓRNYM ROGU - NAD WSZYSTKIM */
+    .phone-top-left {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 3000; /* Bardzo wysoki z-index, żeby był nad wszystkim */
+    }
+
+    .phone-display {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #005f73 0%, #0a7e8c 100%);
+      padding: 12px 25px;
+      border-radius: 50px;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      border: 2px solid #FFD700;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    .phone-icon {
+      font-size: 28px;
+      color: #FFD700;
+    }
+
+    /* Responsywność dla numeru telefonu */
+    @media (max-width: 768px) {
+      .phone-top-left {
+        top: 15px;
+        left: 15px;
+      }
+      
+      .phone-display {
+        padding: 10px 20px;
+        font-size: 20px;
+      }
+      
+      .phone-icon {
+        font-size: 24px;
+      }
+      
+      header h1 {
+        font-size: 2.4rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .phone-top-left {
+        top: 10px;
+        left: 10px;
+      }
+      
+      .phone-display {
+        padding: 8px 16px;
+        font-size: 18px;
+      }
+      
+      .phone-icon {
+        font-size: 22px;
+      }
+      
+      header h1 {
+        font-size: 2rem;
+      }
+      
+      nav a {
+        margin: 0 10px;
+        font-size: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .phone-top-left {
+        top: 8px;
+        left: 8px;
+      }
+      
+      .phone-display {
+        padding: 6px 14px;
+        font-size: 16px;
+      }
+      
+      .phone-icon {
+        font-size: 20px;
+      }
+      
+      header h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NUMER TELEFONU W LEWYM GÓRNYM ROGU - PIERWSZY ELEMENT NA STRONIE -->
+  <div class="phone-top-left">
+    <div class="phone-display">
+      <span class="phone-icon">📞</span>
+      785 698 642
+    </div>
+  </div>
+
+  <header>
+    <h1>GoldFingers</h1>
+    <p>Profesjonalne Usługi Remontowe</p>
+  </header>
+  
+  <nav>
+    <a href="index.html">Strona główna</a>
+    <a href="oferta.html">Oferta</a>
+    <a href="onas.html">O nas</a>
+    <a href="dlaczego.html">Dlaczego my?</a>
+    <a href="galeria.html">Galeria</a>
+  </nav>
+
+  <main>
+    <!-- PUSTY MAIN - TŁO W PEŁNI WIDOCZNE -->
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GoldFingers – Wszystkie prawa zastrzeżone</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oferta - GoldFingers</title>
+  <style>
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+    }
+    
+    body { 
+      font-family: Arial, sans-serif; 
+      color: #333; 
+      background: #f8f9fa;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      padding: 50px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border: 1px solid rgba(255, 215, 0, 0.3);
+    }
+    
+    h1 { 
+      color: #FFD700;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    }
+    
+    .lead {
+      font-size: 20px;
+      font-weight: bold;
+      color: #005f73;
+      text-align: center;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #FFD700;
+    }
+    
+    .services {
+      margin-bottom: 40px;
+    }
+    
+    .services h2 {
+      color: #005f73;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      border-left: 5px solid #FFD700;
+      padding-left: 15px;
+    }
+    
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    
+    .service-item {
+      background: #f0f9fa;
+      padding: 12px 15px;
+      border-radius: 8px;
+      font-size: 17px;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s;
+      border-left: 4px solid #005f73;
+    }
+    
+    .service-item:hover {
+      background: #e6f3f5;
+      transform: translateX(5px);
+      border-left: 4px solid #FFD700;
+    }
+    
+    .service-item::before { 
+      content: "\2714"; 
+      color: #FFD700; 
+      margin-right: 12px; 
+      font-weight: bold;
+      font-size: 18px;
+    }
+    
+    .furniture {
+      background: #fff9e6;
+      padding: 25px;
+      border-radius: 10px;
+      margin-top: 20px;
+      border: 1px solid #FFD700;
+    }
+    
+    .furniture h3 {
+      color: #005f73;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .furniture h3 span {
+      background: #FFD700;
+      color: #005f73;
+      padding: 5px 12px;
+      border-radius: 30px;
+      font-size: 16px;
+      margin-left: 15px;
+    }
+    
+    .furniture-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    
+    .furniture-item {
+      background: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      border: 2px solid #005f73;
+      color: #005f73;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+    
+    .furniture-item:hover {
+      background: #005f73;
+      color: white;
+      border-color: #FFD700;
+    }
+    
+    .phone {
+      margin: 40px 0 30px;
+      padding: 20px;
+      background: linear-gradient(135deg, #005f73 0%, #0a7e8c 100%);
+      border-radius: 50px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+      border: 2px solid #FFD700;
+    }
+    
+    .phone span {
+      color: #FFD700;
+      margin-right: 15px;
+      font-size: 32px;
+    }
+    
+    .back-button {
+      display: block;
+      width: fit-content;
+      margin: 40px auto 0;
+      padding: 15px 35px;
+      background-color: #005f73;
+      color: white;
+      border-radius: 50px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+    
+    .back-button:hover { 
+      background-color: #00475a; 
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+      border: 2px solid #FFD700;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .lead {
+        font-size: 18px;
+      }
+      
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .phone {
+        font-size: 24px;
+        padding: 15px;
+      }
+      
+      .furniture-list {
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .container {
+        padding: 20px;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      .furniture-item {
+        width: 100%;
+        text-align: center;
+      }
+      
+      .phone {
+        font-size: 20px;
+      }
+      
+      .phone span {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>GoldFingers</h1>
+    <div class="lead">
+      Kompleksowe remonty mieszkań i domów. Od projektu do realizacji.
+    </div>
+    
+    <div class="services">
+      <h2>W tym usługi takie jak:</h2>
+      <div class="service-grid">
+        <div class="service-item">Elektryka</div>
+        <div class="service-item">Hydraulika</div>
+        <div class="service-item">Gładzie</div>
+        <div class="service-item">Malowanie</div>
+        <div class="service-item">Tapetowanie</div>
+        <div class="service-item">Wylewki</div>
+        <div class="service-item">Glazura</div>
+        <div class="service-item">Terakota</div>
+        <div class="service-item">Panele</div>
+        <div class="service-item">Montaż drzwi</div>
+      </div>
+    </div>
+    
+    <div class="furniture">
+      <h3>
+        Meble na wymiar
+        <span>do:</span>
+      </h3>
+      <div class="furniture-list">
+        <div class="furniture-item">Kuchni</div>
+        <div class="furniture-item">Łazienki</div>
+        <div class="furniture-item">Przedpokoju</div>
+        <div class="furniture-item">Salonu</div>
+        <div class="furniture-item">Pokoi</div>
+      </div>
+    </div>
+    
+    <div class="phone">
+      <span>📞</span> 785 698 642
+    </div>
+    
+    <a href="index.html" class="back-button">&larr; Powrót do strony głównej</a>
+  </div>
+</body>
+</html>
